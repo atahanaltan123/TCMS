@@ -1,9 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "qlabel.h"
 #include <QMainWindow>
 #include <QTimer>
-#include "ui_mainwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,10 +24,10 @@ private slots:
     void updateTrainPosition();
 
 private:
+    QLabel *trainPositionLabel;
     Ui::MainWindow *ui;
     QTimer *timer;
     int trainSpeed;
     int trainPosition;
 };
-
 #endif // MAINWINDOW_H
